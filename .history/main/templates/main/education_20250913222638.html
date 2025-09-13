@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+  <!-- Header -->
+  <h2 class="display-5 fw-bold mb-5 text-center">Education</h2>
+
+  <!-- Timeline -->
+  <div class="timeline">
+    
+    <!-- B.Tech -->
+    <div class="timeline-item left">
+      <div class="timeline-content shadow-sm p-3">
+        <img src="{% static 'images/baderia_logo.png' %}" 
+             alt="Baderia Logo" 
+             class="edu-logo mb-2">
+        <h5 class="fw-bold mb-1">B.Tech</h5>
+        <p class="mb-1 text-secondary">Baderia Global Institute of Engineering & Management</p>
+        <p class="mb-1">Computer Science & Engineering (IoT, Cybersecurity & Blockchain)</p>
+        <small class="text-muted">2022 – 2026 | Jabalpur (M.P.)</small>
+      </div>
+    </div>
+
+    <!-- 12th -->
+    <div class="timeline-item right">
+      <div class="timeline-content shadow-sm p-3">
+        <img src="{% static 'images/nachiketa_logo.png' %}" 
+             alt="Nachiketa Logo" 
+             class="edu-logo mb-2">
+        <h5 class="fw-bold mb-1">12th Standard</h5>
+        <p class="mb-1 text-secondary">Nachiketa Higher Secondary School</p>
+        <small class="text-muted">2022</small>
+      </div>
+    </div>
+
+    <!-- 10th -->
+    <div class="timeline-item left">
+      <div class="timeline-content shadow-sm p-3">
+        <img src="{% static 'images/nachiketa_logo.png' %}" 
+             alt="Nachiketa Logo" 
+             class="edu-logo mb-2">
+        <h5 class="fw-bold mb-1">10th Standard</h5>
+        <p class="mb-1 text-secondary">Nachiketa Higher Secondary School</p>
+        <small class="text-muted">2020</small>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Custom CSS for Timeline -->
+<style>
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 90%;
+}
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background-color: #6c757d;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1.5px;
+}
+.timeline-item {
+  padding: 20px;
+  position: relative;
+  width: 50%;
+}
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.timeline-item.right {
+  left: 50%;
+}
+.timeline-content {
+  background: #212529;
+  border-radius: 10px;
+  padding: 15px;
+  display: inline-block;
+  max-width: 85%;
+}
+.edu-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .timeline::after { left: 8px; }
+  .timeline-item {
+    width: 100%;
+    padding-left: 30px;
+    text-align: left !important;
+  }
+  .timeline-item.right { left: 0; }
+  .timeline-content { max-width: 100%; }
+}
+</style>
+{% endblock %}
