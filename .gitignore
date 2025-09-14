@@ -26,3 +26,5 @@ build/
 dist/
 *.egg-info/
 staticfiles/
+
+.env
